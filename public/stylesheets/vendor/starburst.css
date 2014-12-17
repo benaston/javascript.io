@@ -1,0 +1,21 @@
+
+
+.starburst {
+    position: relative;
+    left: 0px;
+    top: -110px;
+    width: 0;
+}
+
+.starburst div {
+    background: -webkit-gradient(linear,0 0,0 100%,from(rgba(255,255,255,0)),to(rgba(255,255,255,0)),color-stop(.4,rgba(255,255,255,.7)),color-stop(.6,rgba(255,255,255,.7)));
+    width: 313px;
+    float: left;
+    margin-right: -5px;
+    height: 240px;
+    position: absolute;
+}
+
+ .ray-2 {
+    -webkit-transform: rotate(0deg) translateY(100PX);
+}

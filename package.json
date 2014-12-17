@@ -1,0 +1,30 @@
+{
+  "name": "wizerati",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "~4.0.0",
+    "compression": "~1.0.0",
+    "static-favicon": "~1.0.0",
+    "morgan": "~1.0.0",
+    "body-parser": "~1.0.0",
+    "method-override": "~1.0.0",
+    "errorhandler": "~1.0.0",
+    "ejs": "*"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-jshint": "~0.6.3",
+    "grunt-contrib-nodeunit": "~0.2.0",
+    "grunt-contrib-uglify": "~0.2.2",
+    "grunt-contrib-qunit": "~0.4.0",
+    "grunt-contrib-watch": "~0.6.0",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-css": "~0.5.4",
+    "grunt-replace": "~0.7.2",
+    "grunt-contrib-sass": "~0.7.3"
+  }
+}
