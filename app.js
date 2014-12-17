@@ -3,7 +3,7 @@ var routes = require('./routes');
 var http = require('http');
 var path = require('path');
 var ejs = require('ejs');
-var favicon = require('static-favicon');
+// var favicon = require('static-favicon');
 var compression = require('compression');
 var logger = require('morgan');
 var bodyParser = require('body-parser');
@@ -21,7 +21,7 @@ app.set('view engine', 'ejs');
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(compression()); //gzip compression for HTTP responses
-app.use(favicon());
+// app.use(favicon());
 app.use(logger('dev'));
 app.use(bodyParser());
 app.use(methodOverride());
