@@ -1,0 +1,1056 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details,
+figure, figcaption, footer, header, hgroup,
+menu, nav, section, summary {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 16px;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+html select,
+html textarea,
+html input[type="text"],
+html input[type="password"],
+html input[type="email"],
+html input[type="search"],
+html input[type="tel"] {
+    display: inline-block;
+    width: 343px;
+    margin: 20px 20px 0;
+    background-color: rgba(0, 0, 0, 0);
+    border: 0;
+    outline: 0;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-appearance: none;
+    color: #333;
+    font-size: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 0 0 1px rgba(2, 86, 244, .1);
+    padding: 15px 5px 12px 5px;
+}
+
+form {
+    -webkit-user-select: none;
+}
+
+input[type="search"] {
+    -webkit-appearance: textfield; /*negate safari horrible styling*/
+}
+
+input[type="radio"] {
+    position: absolute;
+    opacity: 0; /*we avoid display none, because it suppresses the built-in required validation message*/
+    cursor: pointer;
+}
+
+label, .lbl {
+    position: relative; /*enables absolute positioning of the focus indicator on :after*/
+    display: block;
+    margin: 0;
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-user-select: none;
+}
+
+body[data-hover-is-enabled='true'] input[type="radio"]:not(:checked) + label:hover {
+    border-color: rgba(255, 200, 0, 0.3);
+}
+
+input[type="radio"]:checked + label {
+    text-decoration: underline;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    background-color: transparent;
+}
+
+label:focus {
+    outline: 5px auto rgb(230, 240, 248);
+    outline-offset: 2px;
+}
+
+.btn:disabled + label,
+button:disabled + label {
+    opacity: .1;
+}
+
+::-webkit-search-cancel-button {
+    display: none; /*too much bother to get this styled correctly*/
+}
+* {
+    -webkit-font-smoothing: antialiased; /*Fixes a blurry text issue in Chrome*/
+}
+
+a, .a {
+    color: rgb(0, 122, 255);
+    text-decoration: none;
+}
+
+body[data-hover-is-enabled='true'] a:hover, body[data-hover-is-enabled='true'] .a:hover {
+    outline: 0;
+    /*color: #005580;*/
+    color: rgb(0, 99, 204);
+    text-decoration: none;
+}
+
+
+a:active, .a:active {
+    color: rgb(9, 78, 150) !important;
+}
+
+a:focus, a:active, .a:focus, .a:active {
+    outline: 0;
+    outline-offset: 2px; /*why?*/
+    /*box-shadow: 0 0 0 2px rgb(244, 244, 248) inset;*/
+}
+
+blockquote {
+    padding: 0 5px 0 5px;
+    margin: 20px 0 3px 0;
+    font-style: italic;
+}
+
+body {
+    font-size: 100%;
+    line-height: 1.5;
+    color: #333333;
+    -webkit-font-smoothing: antialiased;
+}
+
+p, h1, h2, h3, code, a, li {
+    -webkit-user-select: initial;
+}
+
+code {
+    padding: 2px 4px;
+    font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+    font-size: .8rem;
+    color: #333333;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    white-space: nowrap;
+    background-color: #f7f7f9;
+    border: 1px solid #e1e1e8;
+}
+
+div {
+    -webkit-user-select: none;
+}
+
+em {
+    font-style: italic;
+}
+
+figcaption {
+    font-style: italic;
+}
+
+form {
+    display: inline-block;
+}
+
+h1, h3, h4, h5, h6 {
+    clear: both;
+    font-family: helvetica-bold, Arial, sans-serif;
+}
+
+h1 {
+    margin: 10px 0;
+    font-size: 1.7em;
+    line-height: 2.1rem;
+}
+
+h2 {
+    font-size: 1.75rem;
+    line-height: 2rem;
+    color: #333;
+    font-family: helvetica-pro-light, Arial, sans-serif;
+}
+
+h3 {
+    margin: 10px 0;
+    font-size: 1em;
+    line-height: 21px;
+}
+
+h4, h5, h6 {
+    margin: 0 0 0 0;
+    font-size: .96rem;
+    line-height: 3rem;
+}
+
+hr {
+    border: 0;
+    border-bottom: 1px solid #eee;
+    width: 70%;
+    height: 1px;
+}
+
+ol, ul, menu {
+    display: inline-block;
+    padding: 0 0 0 0;
+}
+
+li {
+    display: inline-block;
+    list-style: decimal inside;
+}
+
+main {
+    height: 100%;
+}
+
+strong {
+    font-family: helvetica-bold, Arial, sans-serif;
+}
+
+span, div, p, input, label {
+    font-family: "helvetica-pro-light", Arial, sans-serif;
+}
+
+table {
+    background-color: transparent;
+    border-collapse: collapse;
+    border-spacing: 0;
+    -webkit-user-select: none;
+}
+
+#no-script {
+    display: none;
+}
+
+.glyph {
+    font-family: ionoicons;
+}
+
+*:not(a) {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+#no-compatibility {
+    display: none;
+}
+
+.btn {
+    padding: 0;
+    cursor: pointer;
+    color: #333;
+    margin: 0; /*important to avoid unexpected layout*/
+    font-family: 'ionicons';
+    background-color: transparent;
+    -webkit-user-select: none;
+    text-align: center;
+    box-sizing: border-box;
+    /*border: 1px solid rgba(2, 86, 244, .1);*/
+    border: 0;
+    display: inline-block;
+    transition: border-color 0.1s ease-out .2s, box-shadow .1s ease-out, border-left-width .2s ease-out;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /*removes dark active overlay when tapping buttons on ios*/
+}
+
+.btn-s {
+    width: 67px; /*chosen to match ipad pass entry size, plus centered on left*/
+    border-radius: 85px;
+    line-height: 67px;
+    height: 67px;
+    font-size: 2rem;
+    color: rgba(0, 109, 204, 0.95);
+}
+
+/*We support nesting and sibling label relationships.*/
+.btn-s ~ .lbl,
+.btn-s > .lbl {
+    margin-top: 4px;
+    font-size: .8rem;
+    color: rgba(0, 109, 204, 0.95);
+    -webkit-user-select: none;
+    line-height: 1.34rem; /*required for span labels*/
+}
+
+.btn-100 {
+    width: 110px;
+    /*border-radius: 100px !important;*/
+    /*line-height: 97px !important;*/
+    /*height: 110px !important;*/
+    border-radius: 100px;
+    line-height: 97px;
+    height: 110px;
+    font-size: 2.1em;
+}
+
+.btn-100 ~ .lbl {
+    margin-top: 4px;
+    font-size: 2.3rem;
+    color: rgba(0, 109, 204, 0.95);
+}
+
+.btn:disabled,
+.btn.disabled {
+    opacity: 0.3;
+}
+
+a.btn:hover,
+.btn:hover {
+    text-decoration: none;
+}
+
+/*Do not show the hand when hovering over a disabled button.*/
+.btn:not(:enabled):hover,
+.btn:not(:enabled) ~ label:hover {
+    cursor: auto;
+}
+
+.btn:enabled:focus {
+    outline: none;
+}
+
+.focus-indicator {
+    display: inline-block;
+}
+
+.btn:not(.btn-rotating):enabled:focus:after,
+.btn.btn-rotating:enabled:focus + .focus-indicator:after,
+input[type='radio']:enabled:focus + label:after {
+    content: ' ';
+    display: block;
+    background-color: rgba(2, 86, 244, .1);
+    width: 5px;
+    height: 5px;
+    border-radius: 5px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.lbl:focus,
+label:focus {
+    outline: 5px auto rgb(230, 240, 248);
+    outline-offset: 2px;
+}
+
+.rotating-button-container {
+    display: inline-block;
+    position: relative;
+}
+
+.btn ~ .button-icon {
+    display: inline-block;
+    font-family: 'helvetica-pro-light';
+    position: relative;
+    pointer-events: none;
+    left: 26px;
+    top: 41px;
+    color: rgba(0, 109, 204, 0.95);
+    position: absolute;
+}
+
+.btn-primary:enabled:not(.checked):hover,
+a.btn-primary:not(.disabled):not(.checked):hover {
+    color: rgba(0, 109, 204, 1);
+}
+
+.btn-success ~ .button-icon {
+    color: rgba(0, 200, 0, 1);
+}
+
+.btn-success {
+    border-color: rgba(0, 200, 0, 0.45) rgba(0, 200, 0, 0.45) rgba(0, 200, 0, 0.45) !important;
+}
+
+.btn-neutral ~ .button-icon {
+    color: #333;
+}
+
+.btn-neutral {
+    border-color: rgba(99, 99, 99, 1);
+}
+
+.btn-success:enabled:hover {
+    border-color: rgba(0, 200, 0, 0.85) rgba(0, 200, 0, 0.85) rgba(0, 200, 0, 0.85) !important;
+}
+
+.btn-danger {
+    border-color: rgba(189, 54, 47, .85) rgba(189, 54, 47, .85) rgba(189, 54, 47, .85) !important;
+}
+
+.btn-danger:enabled:hover, .btn-danger:not(:disabled):hover {
+    border-color: rgba(189, 54, 47, .95) rgba(189, 54, 47, .95) rgba(189, 54, 47, .95) !important;
+}
+
+*[data-is-waiting='success'] .btn-success, *[data-is-waiting='primary'] .btn-primary {
+    border: 1px solid rgba(2, 86, 244, .9);
+    border-left: 0;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-name: rotate;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+}
+
+/*Rotates and border-color changes when waiting*/
+.rotating-button-container > .btn[data-is-waiting='true'] {
+    box-shadow: 0 2px 0 2px rgba(0, 0, 0, .05) inset;
+    -webkit-animation-duration: 2.5s;
+    -webkit-animation-name: rotate;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease-out-in;
+}
+
+.radio:enabled + .lbl:active.halo, .btn.halo:enabled:active {
+    box-shadow: 0 0px 0px 45px rgba(0, 109, 204, .2);
+    transition: border-color 0.1s linear, box-shadow 0s linear, border-left-width .2s ease-out;
+}
+
+@media not screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    /*.btn:enabled:active, a.btn:not(.disabled):active {*/
+        /*box-shadow: 0 2px 0px 2px rgba(0, 0, 0, 0.05) inset;*/
+        /*-webkit-transition: none;*/
+    /*}*/
+}
+
+/*media queries must be on a single line to avoid safari bug*/
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    .btn, .lbl {
+        /*delay on border-color avoids a flash during the interval between resetting the is-waiting flag on waiting buttons*/
+        transition: border-color 0.1s ease-out .2s, box-shadow .3s ease-out, border-left-width .2s ease-out;
+    }
+
+    .radio:enabled + .lbl:active, .btn:enabled:active, a.btn:not(.disabled):active {
+        box-shadow: none; /* touch start and end events take care of this*/
+    }
+}
+
+label.radio {
+    height: 40px;
+    width: 40px;
+    border-radius: 40px;
+    line-height: 35px;
+    border: 2px solid #eee;
+    text-align: center;
+    display: block;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 10px;
+    -webkit-user-select: none;
+}
+
+button.checked, .btn.checked {
+    /*background-color: rgba(0, 109, 204, 0.95);*/
+    /*color: white;*/
+    /*box-shadow: none;*/
+}
+
+.form-button-container {
+    display: block;
+    text-align: right;
+    padding-top: 40px;
+}
+
+.form-button-container > * {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.form-button-container-item {
+    display: inline-block;
+    padding-left: 15px;
+}
+
+.form-button-container:after {
+    content: ".";
+    height: 0;
+    clear: both;
+    line-height: 0;
+    visibility: hidden;
+}
+
+.meta-info {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .2s linear 0s, visibility 0s linear .2s;
+    position: absolute;
+    top: 0;
+    left: 330px;
+    width: 200px;
+}
+
+input[type='text']:focus + .meta-info,
+input[type='email']:focus + .meta-info,
+input[type='password']:focus + .meta-info,
+textarea:focus + .meta-info {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity .2s linear 0s, visibility 0s linear 0s;
+}
+
+input[type="radio"]:focus + .focus-indicator {
+    display: block;
+}
+
+label.radio {
+    height: 80px;
+    width: 80px;
+    border-radius: 80px;
+    line-height: 77px;
+    text-align: center;
+    display: block;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 10px;
+    -webkit-user-select: none;
+}
+
+label.radio:hover {
+    -webkit-transition: box-shadow .1s linear;
+}
+
+label.radio:active {
+    -webkit-transition: box-shadow .1s linear;
+    box-shadow: 0 0 19px 12px rgba(200, 200, 200, .3);
+}
+
+label.radio-inverted {
+    border: 2px solid black;
+    box-shadow: 0 0 9px 2px rgba(200, 200, 200, 0.2);
+    color: rgb(0, 175, 237);
+}
+
+label.radio-inverted:hover {
+    -webkit-transition: box-shadow .1s linear;
+    box-shadow: 0 0 9px 2px rgba(200, 200, 200, 0.3);
+}
+
+label.radio-inverted:active {
+    -webkit-transition: box-shadow .1s linear;
+    box-shadow: 0 0 19px 12px rgba(200, 200, 200, .3);
+}
+
+.form-button-container:after {
+    content: ".";
+    height: 0;
+    clear: both;
+    line-height: 0;
+    visibility: hidden;
+}
+
+.field-and-metadata-container {
+    position: relative;
+}
+
+.ico {
+    font-family: ionicons;
+}
+.rotate {
+    -webkit-animation-name: rotate;
+    -moz-animation-name: rotate;
+}
+
+@-webkit-keyframes rotate {
+    0% {
+        -webkit-transform: rotate(0);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes jiggle {
+    0% {
+        -webkit-transform: rotate(-1deg);
+    }
+
+    50% {
+        -webkit-transform: rotate(1deg);
+    }
+}
+
+@-webkit-keyframes pulse {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+
+    50% {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+@-webkit-keyframes shake {
+    0%, 100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+
+    14%, 42%, 70% {
+        -webkit-transform: translateX(-10px);
+        transform: translateX(-10px);
+    }
+
+    28%, 56%, 84% {
+        -webkit-transform: translateX(10px);
+        transform: translateX(10px);
+    }
+}
+
+
+
+.starburst {
+    position: relative;
+    left: 0px;
+    top: -110px;
+    width: 0;
+}
+
+.starburst div {
+    background: -webkit-gradient(linear,0 0,0 100%,from(rgba(255,255,255,0)),to(rgba(255,255,255,0)),color-stop(.4,rgba(255,255,255,.7)),color-stop(.6,rgba(255,255,255,.7)));
+    width: 313px;
+    float: left;
+    margin-right: -5px;
+    height: 240px;
+    position: absolute;
+}
+
+ .ray-2 {
+    -webkit-transform: rotate(0deg) translateY(100PX);
+}
+
+@font-face {
+    font-family: ionicons;
+    src: url('../fonts/ionicons.woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: helvetica-pro-light;
+    src: url('../fonts/helvetica-pro-light.woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: helvetica-bold;
+    src: url('../fonts/helvetica-bold.woff');
+    font-weight: normal;
+    font-style: normal;
+}
+.day-title {
+    font-family: helvetica-bold;
+    color: whitesmoke;
+    margin: 20px 0;
+}
+.syllabus li, .sub-list li {
+    display: list-item;
+}
+.sub-list li {
+    list-style-type: circle;
+}
+.sub-list {
+    display: block;
+    margin-left: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#poster-title {
+    display: none;
+}
+#intro-header h1#website-title {
+    display: auto;
+    font-size: 4.2rem;
+}
+.print-only {
+    display: none;
+}
+#course-dates-table {
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 60px;
+    border: 1px solid whitesmoke;
+    border-radius: 5px;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 20px;
+}
+.small-addition {
+    font-size: .8rem;
+    display: block;
+}
+#course-dates-table th:not(:first-of-type), #course-dates-table td:not(:first-of-type) {
+    border-left: 1px solid rgb(50, 51, 48);
+}
+#course-dates-table td, #course-dates-table th {
+    vertical-align: middle;
+}
+#course-dates-table th, #course-dates-table td {
+    padding: 20px;
+    text-align: center;
+}
+#course-dates-table.syllabus-table td {
+    vertical-align: top;
+}
+#course-dates-table.syllabus-table tbody td:nth-of-type(2),
+#course-dates-table.syllabus-table tbody td:nth-of-type(3) {
+    text-align: left;
+}
+#course-dates-table tr {
+    background: whitesmoke;
+    color: rgb(50, 51, 48);
+}
+#course-dates-table thead tr {
+    background: rgba(245, 245, 245, .9);
+}
+#course-dates-table tbody tr {
+    font-family: helvetica-bold;
+}
+#syllabus-summary {
+    margin-bottom: 30px;
+}
+#syllabus-summary li {
+    display: list-item;
+    list-style: circle;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+.intro-subheading {
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+.io {
+    background-color: #f0db4f;
+    color: #323330;
+    padding: 3px;
+    font-variant: small-caps;
+    font-family: helvetica-bold;
+}
+.io-block {
+    display: inline-block;
+    margin-bottom: 7px;
+}
+#intro::after, #wizerati::after, #icis-live::after, #justtextgiving::after {
+    display: block;
+    content: '';
+    clear: both;
+}
+.mail-link {
+    color: rgb(245, 245, 245);
+}
+.mail-link:hover {
+    text-decoration: underline;
+}
+img {
+    box-shadow: 0 0 48px 0 rgba(0, 0, 0, .3);
+    margin-bottom: 18px;
+}
+#paper-plane {
+    width: 100%;
+    float: left;
+    box-shadow: none;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+#intro, #wizerati, #icis-live, #justtextgiving {
+    box-sizing: border-box;
+    min-height: 676px;
+    position: relative;
+}
+#intro {
+    min-height: 811px;
+}
+#wizerati {
+    background: rgba(0, 158, 225, 1);
+    color: whitesmoke;
+}
+#icis-live {
+    background: rgba(246, 144, 43, 1);
+    color: whitesmoke;
+}
+#justtextgiving {
+    background: rgba(0, 157, 92, 1);
+    color: whitesmoke;
+}
+#footer {
+    background: rgba(38, 38, 38, 1);
+    color: white;
+    height: 250px;
+    box-sizing: border-box;
+    padding: 40px;
+}
+#footer-title-and-byline-container {
+    float: left;
+    width: 300px;
+}
+#footer-link-container {
+    float: right;
+    text-align: right;
+}
+#footer a {
+    color: white;
+}
+#intro-header {
+    float: left;
+    width: 50%;
+}
+#intro-header h1 {
+    /*font-size: 5.5rem;*/
+    
+    line-height: 6rem;
+}
+#wizerati::before, #icis-live::before, #justtextgiving::before {
+    font-family: helvetica-bold;
+    font-size: 147rem;
+    display: block;
+    position: absolute;
+    line-height: 100%;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 128px;
+    vertical-align: top;
+    z-index: 0;
+    content: '';
+}
+#intro-header h1, #wizerati-header h1, #icis-live-header h1, #justtextgiving-header h1 {
+    margin: 0;
+}
+#wizerati-header h1, #icis-live-header h1, #justtextgiving-header h1 {
+    font-size: 3.8rem;
+    line-height: 4.8rem;
+    font-style: italic;
+}
+#wizerati-header p, #icis-live-header p, #justtextgiving-header p {
+    font-size: 1.5rem;
+}
+#wizerati-header, #icis-live-header, #justtextgiving-header {
+    margin: 0 0 30px 0;
+}
+#sub-heading {
+    font-size: 2rem;
+}
+#intro-content, #wizerati-content, #icis-live-content, #justtextgiving-content {
+    width: 80%;
+    margin: auto;
+    max-width: 900px;
+    padding: 80px 0 95px 0;
+    font-size: 1.1rem;
+}
+#intro-body {
+    float: right;
+    width: 50%;
+    box-sizing: border-box;
+    padding-left: 60px;
+}
+p:not(:last-of-type) {
+    margin-bottom: 10px;
+}
+#wizerati-img-2 {
+    width: 100%;
+}
+#icis-live-figure-1, #justtextgiving-figure-1 {
+    float: left;
+    width: 50%;
+    margin: 30px;
+}
+.wizerati-figure-1 {
+    float: left;
+    width: 40%;
+    max-width: 400px;
+    margin: 60px 90px 60px 0;
+}
+.wizerati-figure-1a {
+    float: right;
+    width: 50%;
+    max-width: 400px;
+    margin: 60px 0 60px 90px;
+}
+#wizerati-figure-2 {
+    float: right;
+    width: 40%;
+    max-width: 300px;
+    margin: 60px 0 60px 90px;
+}
+#wizerati-figure-3, #wizerati-figure-4 {
+    float: left;
+    width: 50%;
+    margin: 60px 90px 60px 0;
+}
+#wizerati-img-6 {
+    width: 200px;
+}
+#wizerati-img-7 {
+    width: 400px;
+}
+.wizerati-img-1, .wizerati-img-1a {
+    width: 100%;
+}
+#icis-live-img-1 {
+    width: 100%;
+}
+#wizerati-img-4 {
+    float: right;
+    width: 100%;
+}
+.clear-both::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+#wizerati-body p:before, #icis-live-body p:before, #justtextgiving-body p:before {
+    content: "";
+    width: 200px;
+    display: block;
+    overflow: hidden;
+}
+#down-arrow {
+    font-family: ionicons;
+    font-size: 5rem;
+    opacity: .2;
+}
+body {
+    min-width: 800px;
+}
+#demo-video {
+    float: left;
+    margin-top: 20px;
+    width: 400px;
+    margin-bottom: 40px;
+}
+@media only screen and (max-device-width: 568px) {
+    body {
+        min-width: 320px;
+    }
+    #intro {
+        min-height: 676px;
+    }
+    #intro-header {
+        display: block;
+        float: none;
+        width: 100%;
+    }
+    #intro-body {
+        display: block;
+        float: none;
+        width: 100%;
+        padding-left: 0;
+        margin-top: 20px;
+    }
+    #intro-header h1 {
+        font-size: 2.8rem;
+        line-height: 3.8rem;
+    }
+    #sub-heading {
+        font-size: 1rem;
+    }
+    #intro, #wizerati, #icis-live, #justtextgiving {
+        padding: 40px 0 40px 0;
+    }
+    .starburst {
+        display: none;
+    }
+    #footer {
+        height: 300px;
+        padding: 20px;
+    }
+    #footer-title-and-byline-container {
+        width: 150px;
+        margin-bottom: 30px
+    }
+    .wizerati-figure-1, .wizerati-figure-1a {
+        width: 100%;
+        margin: 30px 0 30px 0;
+    }
+    #demo-video {
+        width: 200px;
+    }
+    #wizerati-header h1, #icis-live-header h1, #justtextgiving-header h1 {
+        font-size: 2.8rem;
+        line-height: 3.8rem;
+    }
+    #intro-content {
+        padding: 0 0 95px 0;
+    }
+    #paper-plane {
+        margin-top: 50px;
+    }
+}
+@media print {
+    #poster-title {
+        font-size: 4.2rem;
+        display: block;
+    }
+    #website-title {
+        display: none;
+    }
+    .no-print, #syllabus-download-link {
+        display: none;
+    }
+    .print-only {
+        display: inline-block;
+    }
+    #syllabus-summary {
+        margin-bottom: 0;
+    }
+    #paper-plane {
+        margin-top: 30px;
+    }
+    #print-cta {
+        font-family: helvetica-bold;
+        font-size: 1.2rem;
+    }
+    #cost {
+        font-family: helvetica-bold;
+        font-size: 1.4rem;
+        margin-top: 20px
+    }
+}
