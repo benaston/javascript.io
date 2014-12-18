@@ -77,7 +77,8 @@ module.exports = function (grunt) {
             },
             files: [
               {src: ['view-templates/index.ejs'], dest: 'view-templates/_index-css-injected.ejs'},
-              {src: ['view-templates/syllabus.ejs'], dest: 'views/syllabus.ejs'}
+              {src: ['view-templates/syllabus.ejs'], dest: 'views/syllabus.ejs'},
+              {src: ['view-templates/logo.ejs'], dest: 'views/logo.ejs'}
             ]
           }, injectBuildNumber: {
             options: {

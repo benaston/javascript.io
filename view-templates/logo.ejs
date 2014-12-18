@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <title>Ben Aston</title>
+    <meta name="author" content="Ben Aston">
+    <style>
+    #logo {
+        letter-spacing: 0px;
+    text-align: right;
+    line-height: 2.5rem;
+    top: 4px;
+    display: block;
+margin-bottom: 7px;
+width: 200px;
+height: 200px;
+word-break: break-word;
+position: relative;
+z-index: 1;
+color: #323330;
+padding: 3px;
+font-variant: small-caps;
+font-family: helvetica-bold;
+margin: 10px 0;
+font-size: 2.5rem;
+    }
+    #logo::before {
+content: '';
+display: block;
+width: 200px;
+height: 200px;
+background-color: rgb(240, 219, 79);
+position: absolute;
+top: -81px;
+z-index: -1;
+left: 6px;
+}
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, target-densityDpi=device-dpi, minimal-ui">
+</head>
+<body>
+<div id="main-container">
+    <header id="header"></header>
+    <main>     
+        <h1 id="logo">learn<wbr>javascript<wbr>.london</h1>
+    </main>
+</body>
+</html>

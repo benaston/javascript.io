@@ -4,3 +4,6 @@ exports.index = function(req, res){
 exports.syllabus = function(req, res){
   res.render('syllabus', { title: 'Express' });
 };
+exports.logo = function(req, res){
+  res.render('logo', { title: 'Express' });
+};

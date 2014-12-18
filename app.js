@@ -31,6 +31,7 @@ if ('development' === app.get('env')) {
   app.use(errorHandler());
 }
 
+app.get('/logo', routes.logo);
 app.get('/syllabus', routes.syllabus);
 app.get('/', routes.index);
 
